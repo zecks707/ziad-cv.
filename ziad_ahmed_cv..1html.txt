@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ziad Ahmed's CV</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: var(--primary-color);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-item i {
+            margin-right: 8px;
+            color: var(--secondary-color);
+        }
+        
+        main {
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            margin: -30px auto 30px;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        section {
+            padding: 30px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        section:last-child {
+            border-bottom: none;
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .skill {
+            background: var(--light-color);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .experience-item, .education-item {
+            margin-bottom: 25px;
+        }
+        
+        .position, .degree {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: var(--dark-color);
+        }
+        
+        .company, .institution {
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+        
+        .date {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin: 5px 0;
+        }
+        
+        .description {
+            margin-top: 10px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 15px;
+        }
+        
+        .social-link {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .social-link:hover {
+            color: var(--secondary-color);
+        }
+        
+        @media (max-width: 768px) {
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            section {
+                padding: 20px;
+            }
+        }
+        
+        .download-btn {
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background 0.3s;
+            display: inline-block;
+        }
+        
+        .download-btn:hover {
+            background: var(--primary-color);
+        }
+        
+        .print-only {
+            display: none;
+        }
+        
+        @media print {
+            .no-print {
+                display: none;
+            }
+            
+            .print-only {
+                display: block;
+            }
+            
+            body {
+                background: white;
+            }
+            
+            main {
+                box-shadow: none;
+                margin: 0;
+            }
+            
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="https://your-image-url.com/your-photo.jpg" alt="Professional headshot of Ziad Ahmed" class="profile-img">
+            <h1>Ziad Ahmed</h1>
+            <p class="tagline">Aviation Professional</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>01107167064</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>ziaddahmedd7@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Alexandria, Egypt</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main class="container">
+        <section id="about">
+            <h2>Summary</h2>
+            <p>I am a passionate aviation professional with deep expertise in managing aviation operations. I have a strong focus on team collaboration, with proven skills in flight scheduling and enhancing operational efficiency. My reliability and flexibility gear me towards optimizing outcomes and supporting team success.</p>
+        </section>
+        
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            
+            <div class="experience-item">
+                <div class="position">Junior Accountant</div>
+                <div class="company">The Right Future</div>
+                <div class="date">01/2023 - Present</div>
+                <div class="description">
+                    <ul>
+                        <li>Successfully ensured the accuracy and integrity of financial statements, demonstrating technical proficiency and building trust and reliability in financial reporting.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="experience-item">
+                <div class="position">Ticketing Agent</div>
+                <div class="company">Alburaq Airlines</div>
+                <div class="date">03/2022 - 07/2022</div>
+                <div class="description">
+                    <ul>
+                        <li>Efficiently managed ticket reservations and cancellations using the Amadeus Global Distribution System (GDS).</li>
+                        <li>Assisted customers with itinerary changes, fare calculations, and travel arrangements, ensuring high levels of satisfaction.</li>
+                        <li>Processed ticketing transactions including refunds and exchanges, in compliance with airline policies.</li>
+                        <li>Maintained up-to-date knowledge of airline regulations, fare structures, and promotional offers.</li>
+                        <li>Collaborated with team members to resolve complex booking issues and deliver exceptional customer service.</li>
+                        <li>Conducted daily audits of ticketing activities to ensure accuracy and adherence to industry standards.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="experience-item">
+                <div class="position">Travel Agency and Operator</div>
+                <div class="company">EgyptAir</div>
+                <div class="date">08/2022 - 01/2023</div>
+                <div class="description">
+                    <ul>
+                        <li>Developed reservation platforms tailored for travel agencies across Egypt and the Middle East.</li>
+                        <li>Negotiated national and international travel packages to meet diverse client needs.</li>
+                        <li>Contributed to optimizing booking processes and enhancing customer experience within the travel agency sector.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="education">
+            <h2>Education</h2>
+            
+            <div class="education-item">
+                <div class="degree">Tourism Management</div>
+                <div class="institution">Higher Institute for Tourism and Hotels (EGOTH)</div>
+                <div class="date">01/2022 - 01/1970</div>
+            </div>
+        </section>
+        
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills">
+                <div class="skill">Amadeus</div>
+                <div class="skill">Microsoft Office</div>
+                <div class="skill">Microsoft PowerPoint</div>
+                <div class="skill">Gmail</div>
+            </div>
+        </section>
+        
+        <section id="strengths">
+            <h2>Strengths</h2>
+            <ul>
+                <li><strong>High-Volume Customer Service:</strong> Skilled in handling large volumes of customer inquiries and demands, ensuring quick, efficient responses while exceeding sales targets.</li>
+                <li><strong>Adaptability:</strong> Capable of working irregular hours during peak travel seasons and accommodating time zone differences with international clients, demonstrating flexibility and dedication to meeting client needs.</li>
+            </ul>
+        </section>
+        
+        <section id="languages">
+            <h2>Languages</h2>
+            <ul>
+                <li>Arabic - Native</li>
+                <li>English - Proficient</li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Connect with me on LinkedIn:</p>
+        <div class="social-links">
+            <a href="https://linkedin.com/in/ziad-ahmed-693690187" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <p>© 2023 Ziad Ahmed. All rights reserved.</p>
+    </footer>
+</body>
+</html>
